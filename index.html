@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfolio Viewer</title>
-
-    <link rel="stylesheet" href="css/portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f0">
+  <title>Portfolio Viewer</title>
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
-
 <body>
+  <header class="topbar">
+    <a class="monogram" href="#" aria-label="Back to all projects">S.</a>
+    <a class="back-link" href="#" id="back-link"><span aria-hidden="true">←</span> All projects</a>
+  </header>
 
-    <main>
-        <p class="number">01</p>
+  <main id="project-content" class="project-content">
+    <p class="eyebrow" id="project-number">01 / SELECTED WORK</p>
+    <h1 id="project-title">Project One</h1>
+    <p class="project-description" id="project-description">Project description goes here.</p>
 
-        <h1>HELLO FROM<br>PROJECT VIEWER</h1>
+    <div class="hero-art" id="project-art" role="img" aria-label="Project preview artwork">
+      <span class="hero-art-label" id="project-art-label">PROJECT ONE</span>
+    </div>
 
-        <p class="status">
-            The external portfolio viewer is working.
-        </p>
-    </main>
+    <div class="project-body" id="project-body">
+      <p>This is where your project content will go. Replace this introduction and add the images, text, and details for each real project in <code>js/projects.js</code>.</p>
+    </div>
 
-    <script src="js/viewer.js"></script>
+    <nav class="project-navigation" aria-label="Project navigation">
+      <a class="project-nav previous" id="previous-project" href="#" aria-label="Previous project">
+        <span class="nav-arrow" aria-hidden="true">←</span>
+        <span class="nav-preview">
+          <span class="preview-image" id="previous-image" aria-hidden="true"></span>
+          <span class="preview-copy">
+            <span class="preview-direction">PREVIOUS PROJECT</span>
+            <span class="preview-title" id="previous-title">Project One</span>
+          </span>
+        </span>
+      </a>
 
+      <a class="project-nav next" id="next-project" href="#" aria-label="Next project">
+        <span class="nav-preview">
+          <span class="preview-image" id="next-image" aria-hidden="true"></span>
+          <span class="preview-copy">
+            <span class="preview-direction">NEXT PROJECT</span>
+            <span class="preview-title" id="next-title">Project Two</span>
+          </span>
+        </span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+  </main>
+
+  <script src="js/projects.js"></script>
+  <script src="js/viewer.js"></script>
 </body>
 </html>
